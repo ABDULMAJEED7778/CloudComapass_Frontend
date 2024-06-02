@@ -24,6 +24,25 @@
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="yourapp" android:host="callback" />
+      </intent-filter>
+      <!-- This intent filter allows the activity to respond to a custom URL scheme -->
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <!-- Adjust the scheme, host, and pathPrefix to match your deep link URL -->
+        <data
+            android:scheme="yourapp"
+            android:host="callback"
+            android:pathPrefix="/status=success" />
+      </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>
   </application>

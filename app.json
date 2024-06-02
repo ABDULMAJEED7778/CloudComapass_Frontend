@@ -2,7 +2,15 @@
   "expo": {
     "name": "CloudCompass",
     "slug": "CloudCompass",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "extra": {
+      "eas": {
+        "projectId": "9bc3b72e-6b5f-4ecf-a926-91dae963ae31"
+      }
+    },
+    "plugins": [
+      "expo-font"
+    ]
   },
   "name": "CloudCompass"
 }
